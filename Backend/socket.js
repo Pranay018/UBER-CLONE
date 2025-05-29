@@ -7,7 +7,7 @@ let io;
 function initializeSocket(server) {
     io = socketIo(server, {
         cors: {
-            origin: 'http://localhost:5173', // Ensure this matches your frontend's URL
+            origin:  'https://magical-madeleine-f38742.netlify.app',
             methods: ['GET', 'POST'],
         },
     });
