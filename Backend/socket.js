@@ -9,7 +9,7 @@ function initializeSocket(server) {
     cors: {
     origin: [
         'http://localhost:5173',
-        'https://magical-madeleine-f38742.netlify.app'
+        'https://dashing-gnome-a829bc.netlify.app',
     ],
     methods: ['GET', 'POST'],
     credentials: true
