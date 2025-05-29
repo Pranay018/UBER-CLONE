@@ -6,12 +6,15 @@ let io;
 
 function initializeSocket(server) {
     io = socketIo(server, {
-        cors: {
-            origin:  'https://magical-madeleine-f38742.netlify.app',
-            methods: ['GET', 'POST'],
-        },
-    });
-
+    cors: {
+    origin: [
+        'http://localhost:5173',
+        'https://magical-madeleine-f38742.netlify.app'
+    ],
+    methods: ['GET', 'POST'],
+    credentials: true
+}
+});
     console.log('Socket.IO server initialized');
 
     io.on('connection', (socket) => {
